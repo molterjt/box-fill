@@ -1,25 +1,24 @@
+import { useState } from 'react';
 import './App.css'
-import CanvasArea from './CanvasArea';
-import { useShapeRender } from './hooks/useShapeRender';
+import MondrianCanvas from './components/MondrianCanvas';
+import Draw from './components/Draw';
+import Free from './components/Free';
+import { TAB } from './types';
+import Navbar from './components/Navbar';
 
 function App() {
-  const {
-    lines,
-    boxes,
-    draw,
-    clearAll
-  } = useShapeRender();
-
+  const [activeTab, setActiveTab] = useState<TAB>(TAB.ART);
   return (
-    <div className={'container'}>
-      <div className='toolbar'>
-        <button className={'btn generate'} onClick={draw}>Generate</button>
-        <button className={'btn clear'} onClick={clearAll}>Clear</button>
+    <div className='view'>
+      <Navbar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      <div className='app-view'>
+        {activeTab === TAB.ART ? (<MondrianCanvas />) : null}
+        {activeTab === TAB.DRAW ? (<Draw />) : null}
+        {activeTab === TAB.UN ? (<Free />) : null}
       </div>
-      <CanvasArea>
-        {lines.map(x => x.renderLine())}
-        {boxes.map(x => x.renderBox())}
-      </CanvasArea>
     </div >
   )
 }

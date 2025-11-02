@@ -1,5 +1,5 @@
-import { LINE_WIDTH } from "./constants";
-import type { BoxType } from "./types";
+import { LINE_WIDTH } from "../constants";
+import type { BoxType } from "../types";
 
 export default class BoxShape {
   public id: number;

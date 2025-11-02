@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Line from '../Line';
-import BoxShape from '../Box';
+import Line from '../components/Line';
+import BoxShape from '../components/Box';
 import { VIEW_HEIGHT, VIEW_WIDTH } from '../constants';
 import { LineOrientation } from '../types';
 import { getRandomIntInclusive } from '../utils';
@@ -25,7 +25,7 @@ export const useShapeRender = () => {
     setBoxes([])
   }
 
-  function draw() {
+  function render() {
     clearAll()
     generateLines();
   }
@@ -163,7 +163,7 @@ export const useShapeRender = () => {
   return {
     lines: [...hLines, ...vLines],
     boxes: boxes,
-    draw: draw,
+    render: render,
     clearAll: clearAll
   }
 }

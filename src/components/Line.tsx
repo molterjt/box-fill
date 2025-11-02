@@ -1,5 +1,5 @@
-import { LINE_WIDTH } from "./constants"
-import { LineOrientation, type LineType, type Point } from "./types"
+import { LINE_WIDTH } from "../constants"
+import { LineOrientation, type LineType, type Point } from "../types"
 
 
 export default class Line {
