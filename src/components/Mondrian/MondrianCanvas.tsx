@@ -1,7 +1,7 @@
 
-import React, { useRef } from 'react'
-import { useShapeRender } from '../hooks/useShapeRender';
-import CanvasArea from './CanvasArea';
+import { useRef } from 'react'
+import { useShapeRender } from '../../hooks/useShapeRender';
+import CanvasArea from '../CanvasArea';
 
 export default function MondrianCanvas() {
   const {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Line from '../components/Line';
-import BoxShape from '../components/Box';
+import Line from '../components/Mondrian/Line';
+import BoxShape from '../components/Mondrian/Box';
 import { VIEW_HEIGHT, VIEW_WIDTH } from '../constants';
 import { LineOrientation } from '../types';
 import { getRandomIntInclusive } from '../utils';
